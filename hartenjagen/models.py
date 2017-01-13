@@ -8,7 +8,9 @@ class Room(models.Model):
 
     def __unicode__(self):
         return self.label
-
+	
+	def __str__(self):
+		return self.name
 
 class Player:
     room = models.ForeignKey(Room, related_name='player')
