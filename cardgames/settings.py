@@ -126,7 +126,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-CHANNEL_LAYERS = {"""
+CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "asgi_redis.RedisChannelLayer",
         "CONFIG": {
@@ -134,5 +134,5 @@ CHANNEL_LAYERS = {"""
         },
         "ROUTING": "hartenjagen.routing.channel_routing",
     },
-	"""
+	
 }
